@@ -1,0 +1,190 @@
+@import "_font_size";
+.main {
+    position: relative;
+    &::before {
+        content: url(../img/tarifsbefore.svg);
+        width: fit-content;
+        height: fit-content;
+        position: absolute;
+        top: 20px;
+        left: 0;
+        z-index: -1;
+        @media (max-width: $breakpoint992) {
+            content: none;
+        }
+    }
+    &::after {
+        content: url(../img/tarifsafter.svg);
+        width: fit-content;
+        height: fit-content;
+        position: absolute;
+        top: 220px;
+        right: 0;
+        z-index: -1;
+        @media (max-width: $breakpoint992) {
+            content: none;
+        }
+    }
+}
+
+.inner {
+    position: relative;
+    &::before {
+        content: url(../img/before-inner-top.svg);
+        width: fit-content;
+        height: fit-content;
+        position: absolute;
+        top: 20px;
+        left: 0;
+        z-index: -1;
+        @media (max-width: $breakpoint992) {
+            content: none;
+        }
+    }
+    &::after {
+        content: url(../img/after-inner-top.svg);
+        width: fit-content;
+        height: fit-content;
+        position: absolute;
+        top: 30%;
+        right: 0;
+        z-index: -1;
+        @media (max-width: $breakpoint992) {
+            content: none;
+        }
+    }
+}
+
+.s-tarrifs {
+    padding: 48px 0;
+    @media (max-width: $breakpoint992) {
+        padding: 20px 0;
+    }
+    .tarifs {
+        background: #FFFFFF;
+        box-shadow: 0px 4px 30px rgba(0, 26, 73, 0.15);
+        border-radius: 20px;
+        padding: 16px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        overflow-x: visible;
+        @media (max-width: $breakpoint992) {
+            flex-wrap: nowrap;
+            overflow-x: scroll;
+            padding: 20px;
+        }
+        &__item {
+            width: 30%;
+            border: 2px solid #93A8FE;
+            border-radius: 10px;
+            padding: 32px 24px 24px;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-width: 270px;
+            margin-right: 0px;
+            @media (max-width: 900px) {
+                margin-right: 20px;
+            }
+            &:hover {
+                background: #93A8FE;
+                cursor: pointer;
+                .tarifs__name {
+                    color: #fff;
+                }
+                .tarifs__group {
+                    p {
+                        color: #fff;
+                        &::before {
+                            content: url(../img/tarifswhite.svg);
+                        }
+                    }
+                }
+                .tarifs__price {
+                    p {
+                        color: #fff;
+                        span {
+                            color: #fff;
+                        }
+                    }
+                }
+                .tarifs__button {
+                    .btn-blue-tarifs {
+                        background: #FE8DA1;
+                        color: #fff;
+                        border: 2px solid #FE8DA1;
+                    }
+                }
+            }
+        }
+        &__name {
+            font-weight: 700;
+            @include font(16, 22);
+            line-height: 29px;
+            text-align: center;
+            color: #003153;
+            margin-bottom: 50px;
+            transition: color 0.3s;
+        }
+        &__group {
+            p {
+                font-weight: 400;
+                @include font(10, 16);
+                color: #003153;
+                position: relative;
+                margin-bottom: 8px;
+                padding-left: 32px;
+                transition: color 0.3s;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                &::before {
+                    content: url(../img/tarifsgreen.svg);
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transition: all 0.3s;
+                }
+            }
+        }
+        &__price {
+            margin-top: 80px;
+            margin-bottom: 20px;
+            p {
+                font-weight: 500;
+                @include font(14, 20);
+                text-align: center;
+                color: #003153;
+                transition: color 0.3s;
+                span {
+                    font-weight: 700;
+                    @include font(21, 32);
+                    transition: color 0.3s;
+                }
+            }
+        }
+        &__button {
+            .btn-blue-tarifs {
+                background: #93A8FE;
+                border-radius: 10px;
+                padding: 14px 32px;
+                font-weight: 700;
+                @include font(14, 16);
+                color: #FFFFFF;
+                cursor: pointer;
+                border: 2px solid #93A8FE;
+                transition: background 0.3s, color 0.3s, border 0.3s;
+                width: 100%;
+                &:hover {
+                    background: #FE8DA1;
+                    color: #fff;
+                    border: 2px solid #FE8DA1;
+                }
+            }
+        }
+    }
+}

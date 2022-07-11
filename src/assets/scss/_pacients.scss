@@ -1,0 +1,74 @@
+@import "_font_size";
+.s-pacients {
+    padding: 48px 0 40px;
+    background: url(../img/pacients.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    @media (max-width: $breakpoint992) {
+        padding: 20px 0;
+    }
+    .pacients {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @media (max-width: $breakpoint992) {
+            flex-direction: column;
+        }
+        &__text {
+            width: 100%;
+            margin-bottom: 48px;
+            p {
+                font-weight: 400;
+                @include font(16, 24);
+                line-height: 110%;
+                text-align: center;
+                color: #003153;
+            }
+        }
+        &__img {
+            width: 30%;
+            margin-bottom: 0;
+            @media (max-width: $breakpoint992) {
+                width: 100%;
+                margin-bottom: 16px;
+            }
+            &-image {
+                width: 100%;
+            }
+        }
+        &__info {
+            width: 65%;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            @media (max-width: $breakpoint992) {
+                flex-direction: column;
+                width: 100%;
+            }
+            p {
+                font-weight: 400;
+                @include font(16, 18);
+                line-height: 110%;
+                color: #587183;
+                width: 49%;
+                position: relative;
+                padding-left: 30px;
+                margin-bottom: 0;
+                &::before {
+                    content: url(../img/markerLi.svg);
+                    position: absolute;
+                    width: fit-content;
+                    height: fit-content;
+                    top: -5%;
+                    left: 0;
+                }
+                @media (max-width: $breakpoint992) {
+                    width: 100%;
+                    margin-bottom: 8px;
+                }
+            }
+        }
+    }
+}

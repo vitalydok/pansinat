@@ -1,0 +1,247 @@
+    @import "_font_size";
+    .s-banner {
+        background: #F1F3FF;
+        margin-top: 24px;
+        padding-top: 0;
+        @media (max-width: $breakpoint992) {
+            margin-top: 0;
+            padding-top: 85px;
+        }
+        .banner {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            align-items: center;
+            @media (max-width: $breakpoint992) {
+                flex-direction: column;
+            }
+            &__info {
+                width: 40%;
+                @media (max-width: $breakpoint992) {
+                    width: 50%;
+                }
+                @media (max-width: $breakpoint480) {
+                    width: 100%;
+                }
+            }
+            &__img {
+                width: 58%;
+                @media (max-width: $breakpoint480) {
+                    width: 100%;
+                }
+                &-image {
+                    width: 100%;
+                }
+            }
+            &__title {
+                max-width: 450px;
+                width: 100%;
+                margin: 0;
+                @media (max-width: $breakpoint992) {
+                    margin: 0 auto;
+                }
+                @media (max-width: $breakpoint480) {
+                    max-width: 220px;
+                    margin: 0 auto;
+                }
+                h1 {
+                    text-align: unset;
+                    font-weight: 700;
+                    @include font(24, 48);
+                    color: #003153;
+                    @media (max-width: $breakpoint992) {
+                        text-align: center;
+                    }
+                }
+            }
+            &__subtitle {
+                margin: 24px 0;
+                p {
+                    font-weight: 400;
+                    @include font(14, 16);
+                    color: #587183;
+                    line-height: 24px;
+                }
+            }
+            &__decription {
+                ul {
+                    li {
+                        font-weight: 400;
+                        font-size: 14px;
+                        color: #003153;
+                        padding-left: 32px;
+                        position: relative;
+                        margin-bottom: 21px;
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                        &::before {
+                            content: '';
+                            width: 24px;
+                            height: 14px;
+                            display: block;
+                            background: url(../img/markerLi.svg);
+                            background-size: contain;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                        }
+                    }
+                }
+            }
+            .banner__button {
+                margin-top: 24px;
+                width: 100%;
+                flex-direction: row;
+                display: flex;
+                justify-content: space-between;
+                @media (max-width: $breakpoint992) {
+                    flex-direction: column;
+                }
+                .btn-blue {
+                    margin-bottom: 0;
+                    width: 100%;
+                    @media (max-width: $breakpoint992) {
+                        margin-bottom: 24px;
+                    }
+                }
+            }
+        }
+    }
+    
+    .s-banner-inner {
+        background: #F1F3FF;
+        margin-top: 24px;
+        padding-top: 0;
+        @media (max-width: $breakpoint992) {
+            margin-top: 0;
+            padding-top: 85px;
+        }
+        .banner {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            align-items: center;
+            padding: 65px 0 55px;
+            @media (max-width: $breakpoint992) {
+                flex-direction: column-reverse;
+                padding: 0 0 32px;
+            }
+            &__info {
+                width: 57%;
+                @media (max-width: $breakpoint992) {
+                    width: 50%;
+                }
+                @media (max-width: $breakpoint480) {
+                    width: 100%;
+                }
+            }
+            &__img {
+                .nav__image {
+                    width: 100%;
+                    overflow: hidden;
+                    height: 100%;
+                    background-size: cover !important;
+                    background-repeat: no-repeat !important;
+                    box-shadow: -6px -1px 12px 0px rgb(241 243 255) inset;
+                    img {
+                        width: calc(100% + 2px);
+                        height: calc(100% + 2px);
+                        margin: 0;
+                        max-width: 100%;
+                    }
+                }
+            }
+            &__title {
+                width: 100%;
+                margin: 0;
+                @media (max-width: $breakpoint992) {
+                    margin: 0 auto;
+                }
+                @media (max-width: $breakpoint480) {
+                    margin: 0 auto;
+                }
+                h1 {
+                    text-align: unset;
+                    font-weight: 700;
+                    @include font(24, 48);
+                    color: #003153;
+                    @media (max-width: $breakpoint992) {
+                        text-align: center;
+                    }
+                }
+            }
+            &__subtitle {
+                margin: 24px 0;
+                p {
+                    font-weight: 400;
+                    @include font(14, 16);
+                    color: #587183;
+                    line-height: 24px;
+                }
+            }
+            &__decription {
+                margin: 24px 0;
+                ul {
+                    li {
+                        font-weight: 400;
+                        font-size: 14px;
+                        color: #003153;
+                        padding-left: 32px;
+                        position: relative;
+                        margin-bottom: 21px;
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                        &::before {
+                            content: '';
+                            width: 24px;
+                            height: 14px;
+                            display: block;
+                            background: url(../img/markerLi.svg);
+                            background-size: contain;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                        }
+                    }
+                }
+            }
+            &__form {
+                margin-bottom: 0;
+                @media (max-width: $breakpoint992) {
+                    margin-bottom: 24px;
+                }
+                form {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    input {
+                        width: 49%;
+                        background: #FFFFFF;
+                        border: 2px solid #93A8FE;
+                        border-radius: 6px;
+                        padding: 18px 40px 18px 12px;
+                        position: relative;
+                        &:first-child {
+                            margin-bottom: 0;
+                        }
+                        @media (max-width: $breakpoint992) {
+                            width: 100%;
+                            &:nth-child(2) {
+                                margin-bottom: 24px;
+                            }
+                        }
+                    }
+                    button {
+                        width: 100%;
+                        margin-top: 24px;
+                    }
+                }
+            }
+        }
+    }

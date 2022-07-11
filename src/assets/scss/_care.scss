@@ -1,0 +1,151 @@
+@import "_font_size";
+:root {
+    --white: #FFF;
+    --blue: #562BF7;
+    --light: #F5F5F5;
+    --light-blue: #F3F0FF;
+    --grey: #eee;
+    --dark-grey: #666;
+    --black: #222;
+}
+
+.s-care {
+    padding: 48px 0;
+    @media (max-width: $breakpoint992) {
+        padding: 24px 0;
+    }
+    .care {
+        .wrapper {
+            display: flex;
+        }
+        .indicator {
+            padding: 1.5rem 0;
+            width: 40%;
+            display: block;
+        }
+        .indicator li {
+            display: flex;
+            align-items: center;
+            grid-gap: 0.5rem;
+            padding: 32px 36px;
+            cursor: pointer;
+            font-weight: 500;
+            @include font(18, 20);
+            line-height: 24px;
+            color: #003153;
+            background: #FFF;
+            border: 2px solid #F1F3FF;
+            border-radius: 10px;
+            margin-bottom: 16px;
+            margin-right: 24px;
+            box-shadow: 0px 4px 30px rgb(0 26 73 / 3%);
+            position: relative;
+            min-width: none;
+            &::before {
+                position: absolute;
+                content: '';
+                width: 10px;
+                height: 100%;
+                background: #FE8DA1;
+                border-radius: 10px 0 0 10px;
+                top: 0;
+                left: 2px;
+            }
+        }
+        .indicator li i {
+            font-size: 1rem;
+        }
+        .indicator li:hover {
+            box-shadow: -21px 5px 30px rgb(0 26 73 / 15%);
+            margin-right: 0;
+            border-radius: 10px 0 0 10px;
+            border-right: none;
+        }
+        .indicator li.active {
+            box-shadow: -21px 5px 30px rgb(0 26 73 / 15%);
+            margin-right: 0;
+            border-radius: 10px 0 0 10px;
+            border-right: none;
+        }
+        .content {
+            padding: 1.5rem 0;
+            width: 60%;
+        }
+        .content li {
+            display: none;
+        }
+        .content li.active {
+            display: block;
+            height: 100%;
+            box-shadow: 0px 4px 30px rgb(0 26 73 / 15%);
+            padding: 88px 32px;
+            border-radius: 0px;
+        }
+        .content li h1 {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 24px;
+            color: #003153;
+            margin-bottom: 34px;
+        }
+        .content li {
+            p {
+                font-weight: 400;
+                font-size: 18px;
+                position: relative;
+                margin-bottom: 24px;
+                padding-left: 32px;
+                color: #587183;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                &::before {
+                    content: url(../img/tarifsgreen.svg);
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+        }
+        @media screen and (max-width: 576px) {
+            .wrapper {
+                flex-direction: column;
+            }
+            .indicator {
+                border-right: none;
+                width: 100%;
+                display: flex;
+                overflow: auto;
+                padding: 1.5rem;
+            }
+            .content {
+                width: 100%;
+            }
+            .content li.active {
+                display: block;
+                height: 100%;
+                box-shadow: 0px 4px 30px rgb(0 26 73 / 15%);
+                padding: 16px 8px;
+                border-radius: 10px;
+            }
+            .indicator li {
+                padding: 14px 17px 14px 20px;
+                min-width: 300px;
+            }
+            .indicator li:hover {
+                box-shadow: -21px 5px 30px rgb(0 26 73 / 15%);
+                margin-right: 24px;
+                border-radius: 10px 0 0 10px;
+                border-right: none;
+            }
+            .indicator li.active {
+                box-shadow: -21px 5px 30px rgb(0 26 73 / 15%);
+                margin-right: 24px;
+                border-radius: 10px;
+                border-right: 2px solid #F1F3FF;
+            }
+        }
+    }
+}

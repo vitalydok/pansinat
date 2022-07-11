@@ -1,0 +1,135 @@
+.main-shedule {
+    position: relative;
+    &::before {
+        content: url(../img/shedule-before.svg);
+        width: fit-content;
+        height: fit-content;
+        position: absolute;
+        top: 72%;
+        left: 0;
+        z-index: -1;
+        @media (max-width: $breakpoint992) {
+            content: none;
+        }
+    }
+    &::after {
+        content: url(../img/shedule-after.svg);
+        width: fit-content;
+        height: fit-content;
+        position: absolute;
+        top: 85%;
+        right: 0;
+        z-index: -1;
+        @media (max-width: $breakpoint992) {
+            content: none;
+        }
+    }
+}
+
+.s-shedule-text,
+.s-shedule {
+    padding: 48px 0;
+    @media (max-width: $breakpoint992) {
+        padding: 24px 0;
+    }
+    .shedule {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap: 32px;
+        @media (max-width: $breakpoint480) {
+            row-gap: 16px;
+        }
+        &__item {
+            width: 31%;
+            background: #F1F3FF;
+            border: 2px solid #FE8DA1;
+            box-shadow: 0px 4px 10px rgba(0, 26, 73, 0.15);
+            border-radius: 10px;
+            min-height: 136px;
+            padding: 16px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s;
+            @media (max-width: $breakpoint992) {
+                width: 48%;
+            }
+            @media (max-width: $breakpoint480) {
+                width: 100%;
+            }
+            &::before {
+                content: "";
+                background: #FE8DA1;
+                height: 78px;
+                width: 74px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                position: absolute;
+                top: -1px;
+                right: -1px;
+                border: 2px solid #FE8DA1;
+                clip-path: polygon(0.43% 41.03%, 0.44% 36.82%, 1.24% 32.74%, 1.90% 28.73%, 3.14% 24.91%, 4.35% 21.03%, 5.82% 17.26%, 7.29% 13.55%, 8.62% 9.73%, 8.99% 5.85%, 9.31% 1.80%, 9.63% 0.00%, 100.00% 0.00%, 100.00% 96.21%, 97.85% 96.63%, 94.74% 97.89%, 92.11% 98.88%, 88.82% 99.16%, 84.51% 100%, 79.68% 99.96%, 75.58% 99.64%, 71.64% 98.97%, 67.98% 97.64%, 65.20% 96.68%, 62.13% 94.75%, 59.64% 92.83%, 57.36% 90.41%, 52.17% 83.63%, 48.33% 78.50%, 44.60% 74.13%, 41.81% 71.20%, 39.46% 69.49%, 37.19% 67.34%, 34.06% 65.22%, 30.45% 63.94%, 26.75% 62.66%, 23.00% 61.72%, 19.01% 60.29%, 14.91% 58.80%, 10.96% 57.13%, 7.68% 54.93%, 4.68% 51.85%, 2.07% 48.69%, 0.58% 44.96%);
+                z-index: 1;
+                border-radius: 6px;
+                transition: all 0.5s;
+            }
+            &:hover {
+                cursor: pointer;
+                .shedule__time {
+                    color: #fff;
+                }
+                .shedule__description {
+                    color: #fff;
+                }
+                &::before {
+                    width: 110%;
+                    height: 110%;
+                    background-size: cover;
+                    border-radius: 6px;
+                    clip-path: polygon(0.00% 40.75%, 0.00% 35.84%, 0.00% 32.46%, 0.44% 28.59%, 0.00% 24.49%, 0.00% 20.19%, 0.00% 16.41%, 0.00% 12.57%, 0.00% 8.89%, 0.00% 5.01%, 0.10% 0.53%, 0.00% 0.00%, 100.00% 0.00%, 100.00% 100%, 97.56% 100%, 95.03% 100%, 92.11% 100%, 89.40% 100%, 84.95% 100%, 79.97% 100%, 75.87% 100%, 71.79% 100%, 68.42% 100%, 65.93% 100%, 63.74% 100%, 60.22% 100%, 55.02% 100%, 52.90% 100%, 48.33% 100%, 26.32% 100%, 8.47% 100%, 3.50% 100%, 0.00% 100%, 0.00% 99.78%, 0.00% 97.52%, 0.00% 92.87%, 0.00% 90.66%, 0.00% 88.53%, 0.00% 86.06%, 0.00% 60.22%, 0.00% 68.00%, 0.00% 52.41%, 0.00% 48.27%, 0.00% 44.82%);
+                }
+            }
+            &-label {
+                position: absolute;
+                top: 16px;
+                right: 16px;
+                width: 95px;
+                padding: 5px 8px;
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 15px;
+                color: #FFFFFF;
+                background: #51B98E;
+                border-radius: 4px;
+                z-index: 1;
+                text-align: center;
+            }
+        }
+        &__time {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 20px;
+            color: #003153;
+            margin-bottom: 16px;
+            z-index: 2;
+            // transition: all 0.5s;
+            position: relative;
+        }
+        &__description {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            color: #003153;
+            z-index: 2;
+            // transition: all 0.5s;
+            position: relative;
+            max-width: 300px;
+        }
+    }
+}
+
+.s-shedule-text {
+    .shedule {
+        margin: 48px 0;
+    }
+}

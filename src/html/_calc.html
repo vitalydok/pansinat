@@ -1,0 +1,86 @@
+<section class="s-calc">
+    <div class="container">
+        <div class="block__title">
+            <h2>Медицинское обслуживание и услуги</h2>
+        </div>
+        <div class="calc">
+            <div class="calc__item">
+                <div class="calc__item-title">
+                    Выберите пол:
+                </div>
+                <select name="potencial" id="potencial" class="custom-select sources" placeholder="Выбрать">
+											<option value="option1" selected>option1</option>
+											<option value="option2">option2</option>
+											<option value="option3">option3</option>
+											<option value="option4">option4</option>
+											<option value="option5">option5</option>
+										</select>
+            </div>
+            <div class="calc__item">
+                <div class="calc__item-title">
+                    Состояние:
+                </div>
+                <select name="potencial" id="potencial" class="custom-select sources" placeholder="Выбрать">
+										<option value="option1" selected>Передвигается самостоятельно</option>
+										<option value="option2">option2</option>
+										<option value="option3">option3</option>
+										<option value="option4">option4</option>
+										<option value="option5">option5</option>
+									</select>
+            </div>
+            <div class="calc__item">
+                <div class="calc__item-title">
+                    Ваш возраст:
+                    <input type="text" onkeydown="return false" id="i1"> лет
+                </div>
+
+                <input type="range" class="styled-slider slider-progress" id="r1" oninput="fun1()">
+
+                <!-- <div class="length range__slider" data-min="30" data-max="110">
+                    <div class="length__title field-title" id="input" data-length='0' oninput="fun1()">Ваш возраст:</div>
+                    <input id="slider" type="range" min="30" max="110" value="56" />
+                </div> -->
+            </div>
+            <div class="calc__item">
+                <div class="calc__item-title">
+                    Выберите даты проживания:
+                </div>
+                <!-- <input type="text" autocomplete="off" id="datepicker" placeholder="05.05.2022" class="calendar__input"> -->
+                <input type="text" onkeydown="return false" autocomplete="off" id="datepicker" placeholder="10.05.2022" class="calendar__input">
+            </div>
+            <div class="calc__item">
+                <div class="calc__item-title">
+                    Имя:
+                </div>
+                <input type="text" placeholder="Иван Иванов">
+            </div>
+            <div class="calc__item">
+                <div class="calc__item-title">
+                    Номер телефона:
+                </div>
+                <input type="text" inputmode="tel" name="phone" class="phone" id="phone" placeholder="+7(000)000-00-00" />
+                <!-- <span class="error_f_phone error">Введите номер телефона!</span> -->
+            </div>
+            <div class="calc__item text">
+                <div class="calc__item-price">
+                    Стоимость 800 ₽/сутки *
+                </div>
+                <div class="calc__item-text">
+                    * Указана примерная стоимость и размер скидки. Чтобы получить точный расчет и получить консультацию - отправьте заявку.
+                </div>
+            </div>
+            <div class="calc__item">
+                <button class="btn-blue">Узнать стоимость</button>
+                <div class="calc__item-politics">
+                    <div class="checkbox">
+                        <div class="checkbox__1">
+                            <input id="checkbox-1" type="checkbox" checked>
+                            <label for="checkbox-1">
+														<i class="material-icons">done</i></label>
+                        </div>
+                    </div>
+                    <p>Согласен на обработку <a href="javascript:void(0)">персональных данных</a></p>
+                </div>
+            </div>
+        </div>
+</section>

@@ -1,0 +1,53 @@
+.s-fotogal {
+    padding: 48px 0;
+    @media (max-width: $breakpoint992) {
+        padding: 24px 0;
+    }
+    .fotogal {
+        display: flex;
+        justify-content: space-between;
+        row-gap: 24px;
+        flex-wrap: wrap;
+        .gallery-item {
+            width: 32%;
+            border-radius: 8px;
+            display: block;
+            position: relative;
+            transition: all 0.5s;
+            &::before {
+                content: none;
+                opacity: 0;
+                z-index: -999;
+            }
+            &:hover {
+                &:before {
+                    content: url(../img/lupagall.svg);
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 8px;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    opacity: 1;
+                    z-index: 2;
+                    background: linear-gradient(0deg, rgba(254, 141, 161, 0.6), rgba(254, 141, 161, 0.6));
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+            }
+            img {
+                width: 100%;
+            }
+            @media (max-width: $breakpoint768) {
+                width: 49%;
+            }
+            @media (max-width: $breakpoint480) {
+                width: 100%;
+            }
+        }
+    }
+}

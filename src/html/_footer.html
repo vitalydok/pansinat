@@ -1,0 +1,140 @@
+<footer>
+    <div class="container">
+        <div class="footer">
+            <div class="footer__item">
+                <div class="footer__logo">
+                    <img src="./assets/img/logo.svg" alt="" />
+                    <p>Сеть пансионатов для пожилых людей</p>
+                </div>
+                <div class="footer__social">
+                    <a href="javascript:void(0)" class="footer__social-items">
+                        <img src="./assets/img/footer__wa.svg" alt="" />
+                    </a>
+                    <a href="javascript:void(0)" class="footer__social-items">
+                        <img src="./assets/img/footer__tg.svg" alt="" />
+                    </a>
+                    <a href="javascript:void(0)" class="footer__social-items">
+                        <img src="./assets/img/footer_y.svg" alt="" />
+                    </a>
+                </div>
+                <div class="footer__number">
+                    <a href="javascript:void(0)">8 800 2700 700</a>
+                </div>
+                <div class="footer__mail">
+                    <a href="javascript:void(0)">info@pans.rehab</a>
+                </div>
+                <div class="footer__adres">
+                    <p>Москва, ул. Мавлютова, дом 31</p>
+                    <p><span>Мы работаем КРУГЛОСУТОЧНО</span></p>
+                </div>
+            </div>
+            <div class="footer__item">
+                <div class="footer__title">
+                    Услуги
+                </div>
+                <div class="footer__service">
+                    <a href="javascript:void(0)">Пансионат для ветеранов</a>
+                    <a href="javascript:void(0)">Уход за пожилыми инвалидами</a>
+                    <a href="javascript:void(0)">Уход после перелома шейки бедра</a>
+                    <a href="javascript:void(0)">Уход после операций</a>
+                    <a href="javascript:void(0)">Уход за лежачими больными</a>
+                    <a href="javascript:void(0)">Уход за пожилыми старше 80 лет</a>
+                    <a href="javascript:void(0)">Уход после инсульта</a>
+                    <a href="javascript:void(0)">Уход после инфаркта</a>
+                </div>
+            </div>
+            <div class="footer__item">
+                <div class="footer__title">
+                    О пансионате
+                </div>
+                <div class="footer__service">
+                    <a href="javascript:void(0)">О нас</a>
+                    <a href="javascript:void(0)">Фото</a>
+                    <a href="javascript:void(0)">Отзывы</a>
+                    <a href="javascript:void(0)">Проживание</a>
+                    <a href="javascript:void(0)">Оформление</a>
+                    <a href="javascript:void(0)">Полезные статьи</a>
+                    <a href="javascript:void(0)">Вопрос-ответ</a>
+                    <a href="javascript:void(0)">Карта сайта</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в
+                абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по
+                ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. </p>
+            <p>© 2021</p>
+            <p><a href="javascript:void(0)">Политика конфиденциальности</a></p>
+        </div>
+    </div>
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=eb505fe6-1302-4c4e-8cbc-e50446915e83" type="text/javascript"></script>
+    <script>
+        ymaps.ready(init);
+
+        function init() {
+            var myMap = new ymaps.Map("map", {
+                center: [55.815089, 37.45778],
+                zoom: 14,
+                controls: [
+                    'zoomControl', // Ползунок масштаба
+                    'rulerControl', // Линейка
+                    'routeButtonControl', // Панель маршрутизации
+                    'trafficControl', // Пробки
+                    'typeSelector', // Переключатель слоев карты
+                    'fullscreenControl', // Полноэкранный режим
+
+                    // Поисковая строка
+                    new ymaps.control.SearchControl({
+                        options: {
+                            size: 'large',
+                            provider: 'yandex#search'
+                        }
+                    })
+
+                ]
+            });
+            myMap.behaviors.disable('scrollZoom');
+            myMap.behaviors.disable('drag');
+            var myPlacemark = new ymaps.Placemark([55.815089, 37.45778], {
+                hintContent: 'ул. Габричевского д. 5, Москва',
+                balloonContent: 'ул. Габричевского д. 5, Москва'
+            });
+
+            myMap.geoObjects.add(myPlacemark);
+        }
+    </script>
+    <script>
+        ymaps.ready(init);
+
+        function init() {
+            var myMap = new ymaps.Map("mobile__map", {
+                center: [55.815089, 37.45778],
+                zoom: 14,
+                controls: [
+                    'zoomControl', // Ползунок масштаба
+                    'rulerControl', // Линейка
+                    'routeButtonControl', // Панель маршрутизации
+                    'trafficControl', // Пробки
+                    'typeSelector', // Переключатель слоев карты
+                    'fullscreenControl', // Полноэкранный режим
+
+                    // Поисковая строка
+                    new ymaps.control.SearchControl({
+                        options: {
+                            size: 'large',
+                            provider: 'yandex#search'
+                        }
+                    })
+
+                ]
+            });
+            myMap.behaviors.disable('scrollZoom');
+            var myPlacemark = new ymaps.Placemark([55.815089, 37.45778], {
+                hintContent: 'ул. Габричевского д. 5, Москва',
+                balloonContent: 'ул. Габричевского д. 5, Москва'
+            });
+            myMap.geoObjects.add(myPlacemark);
+        }
+    </script>
+</footer>

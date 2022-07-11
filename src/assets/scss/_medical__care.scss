@@ -1,0 +1,71 @@
+.s-medical-care-inner,
+.s-medical-care {
+    padding: 48px 0;
+    @media (max-width: $breakpoint768) {
+        padding: 24px 0;
+    }
+    .medical {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        @media (max-width: $breakpoint768) {
+            flex-direction: column;
+        }
+        &__image {
+            width: 40%;
+            margin: 0;
+            @media (max-width: $breakpoint768) {
+                width: 70%;
+                margin: 0 auto 16px;
+            }
+            @media (max-width: $breakpoint480) {
+                width: 100%;
+            }
+            &-image {
+                width: 100%;
+            }
+        }
+        &__text {
+            width: 58%;
+            @media (max-width: $breakpoint768) {
+                width: 100%;
+            }
+            p {
+                font-weight: 400;
+                @include font(16, 18);
+                line-height: 110%;
+                color: #587183;
+                position: relative;
+                padding-left: 30px;
+                margin-bottom: 14px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                &::before {
+                    content: url(../img/markerLi.svg);
+                    position: absolute;
+                    width: fit-content;
+                    height: fit-content;
+                    top: -5%;
+                    left: 0;
+                }
+                @media (max-width: $breakpoint768) {
+                    margin-bottom: 8px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.s-medical-care-inner {
+    .medical {
+        justify-content: space-evenly;
+    }
+    .medical__text {
+        width: 50%;
+    }
+}

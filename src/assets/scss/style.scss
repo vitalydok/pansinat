@@ -1,0 +1,42 @@
+// Global SCSS-files imports
+@import './vars';
+@import './reset';
+@import './global';
+@import './data';
+@import './lib1';
+@import './lib2';
+@import './lib3';
+// Sections or Pages SCSS-files imports
+@import './header';
+@import './banner';
+@import './tarifs';
+@import './advantages';
+@import './relative';
+@import './pacients';
+@import './into__price';
+@import './price__table';
+@import './medical__care';
+@import './calc';
+@import './shedule';
+@import './guest';
+@import './result';
+@import './form__index';
+@import './text__block';
+@import './garanties';
+@import './rooms';
+@import './video';
+@import './faq';
+@import './review';
+@import './footer';
+@import './help';
+@import './care';
+@import './stati-on-inner';
+@import './personal';
+@import './stati-page';
+@import './registration';
+@import './fotogal';
+@import './contacts';
+@import './article';
+@import './selection';
+// Libs
+// @import './libs/swiper';
