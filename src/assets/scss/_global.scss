@@ -1178,18 +1178,20 @@ textarea {
     left: 68px;
     top: 100%;
     opacity: 0;
-    transition: transform .4s, opacity .4s;
-    transform: translateY(-200%);
+    transition: display 1s, opacity 1s;
+    // transform: translateY(-200%);
     right: 0;
     z-index: 3;
     padding: 24px;
     border-radius: 0 20px 20px 20px;
     border: 2px solid #51b98e;
+    display: none;
 }
 
 .services-nav.active {
     opacity: 1;
-    transform: translateY(0);
+    display: block;
+    // transform: translateY(0);
 }
 
 .services-lvl1__link {

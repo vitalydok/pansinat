@@ -1360,26 +1360,20 @@ textarea {
   left: 68px;
   top: 100%;
   opacity: 0;
-  -webkit-transition: opacity 0.4s, -webkit-transform 0.4s;
-  transition: opacity 0.4s, -webkit-transform 0.4s;
-  -o-transition: transform 0.4s, opacity 0.4s;
-  transition: transform 0.4s, opacity 0.4s;
-  transition: transform 0.4s, opacity 0.4s, -webkit-transform 0.4s;
-  -webkit-transform: translateY(-200%);
-      -ms-transform: translateY(-200%);
-          transform: translateY(-200%);
+  -webkit-transition: display 1s, opacity 1s;
+  -o-transition: display 1s, opacity 1s;
+  transition: display 1s, opacity 1s;
   right: 0;
   z-index: 3;
   padding: 24px;
   border-radius: 0 20px 20px 20px;
   border: 2px solid #51b98e;
+  display: none;
 }
 
 .services-nav.active {
   opacity: 1;
-  -webkit-transform: translateY(0);
-      -ms-transform: translateY(0);
-          transform: translateY(0);
+  display: block;
 }
 
 .services-lvl1__link {
