@@ -1388,6 +1388,7 @@ $('.other-inner').owlCarousel({
     items: 3,
     loop: false,
     margin: 10,
+    startPosition: 1,
     navText: ["", ""],
     responsive: {
         300: {
@@ -1426,6 +1427,7 @@ $('.stati-inner').owlCarousel({
     loop: false,
     dots: true,
     margin: 10,
+    startPosition: 1,
     navText: ["", ""],
     responsive: {
         300: {
